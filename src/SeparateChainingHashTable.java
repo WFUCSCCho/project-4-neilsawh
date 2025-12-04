@@ -1,3 +1,10 @@
+/*
+∗ @file: SeparateChainingHashTable.java
+∗ @description: implements a hash table using separate chaining
+with linked lists, supporting insert, remove, contains, and rehash operations.
+∗ @author: Neil Sawhney
+∗ @date: December 4, 2025
+ */
 import java.util.LinkedList;
 import java.util.List;
 
@@ -38,8 +45,16 @@ public class SeparateChainingHashTable<AnyType> {
      * @param x the item to insert.
      */
     public void insert(AnyType x) {
-        // FINISH ME
+        List<AnyType> whichList = theLists[myhash(x)];
+        if (!whichList.contains(x)) {
+            whichList.add(x);
+            currentSize++;
+
+            if (currentSize > theLists.length)
+                rehash();
+        }
     }
+
 
     /**
      * Remove from the hash table.
@@ -47,8 +62,11 @@ public class SeparateChainingHashTable<AnyType> {
      * @param x the item to remove.
      */
     public void remove(AnyType x) {
-        // FINISH ME
+        List<AnyType> whichList = theLists[myhash(x)];
+        if (whichList.remove(x))
+            currentSize--;
     }
+
 
     /**
      * Find an item in the hash table.
@@ -57,15 +75,20 @@ public class SeparateChainingHashTable<AnyType> {
      * @return true if x is not found.
      */
     public boolean contains(AnyType x) {
-        // FINISH ME
+        List<AnyType> whichList = theLists[myhash(x)];
+        return whichList.contains(x);
     }
+
 
     /**
      * Make the hash table logically empty.
      */
     public void makeEmpty() {
-        // FINISH ME
+        for (List<AnyType> list : theLists)
+            list.clear();
+        currentSize = 0;
     }
+
 
     /**
      * A hash routine for String objects.
@@ -87,9 +110,20 @@ public class SeparateChainingHashTable<AnyType> {
         return hashVal;
     }
 
+    // Doubles table size and reinserts all items
     private void rehash() {
-        // FINISH ME
+        List<AnyType>[] oldLists = theLists;
+        theLists = new LinkedList[nextPrime(2 * theLists.length)];
+        for (int i = 0; i < theLists.length; i++)
+            theLists[i] = new LinkedList<>();
+
+        currentSize = 0;
+        for (List<AnyType> list : oldLists)
+            for (AnyType item : list)
+                insert(item);
     }
+
+    // Computes hash value for an object
 
     private int myhash(AnyType x) {
         int hashVal = x.hashCode();
