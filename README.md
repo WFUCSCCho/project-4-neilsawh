@@ -80,14 +80,14 @@ Using your favorite graphing software (e.g., MS Excel or Google Sheets), plot th
 each case. Take a screenshot of your graph and put them here by modifying this file, committing, and pushing
 it to this repository.
 
-Insertion, search, and deletion running time (already sorted):
-
 ![Firefly picture of a cat 86147](https://github.com/user-attachments/assets/8b2d008e-3011-4979-97b8-fa2e9886a01a)
 
+Insertion, search, and deletion running time (already sorted): <img width="620" height="386" alt="Screenshot 2025-12-04 at 2 29 01 PM" src="https://github.com/user-attachments/assets/6bb9d37a-ddf2-46b1-a3df-b06eafe2eb0a" />
 
-Insertion, search, and deletion running time (shuffled):
+Insertion, search, and deletion running time (shuffled): <img width="705" height="412" alt="Screenshot 2025-12-04 at 2 40 27 PM" src="https://github.com/user-attachments/assets/2442a4fc-0eaa-414f-a94f-af5d49ed14a5" />
 
-Insertion, search, and deletion running time (reversed):
+Insertion, search, and deletion running time (reversed): <img width="641" height="414" alt="Screenshot 2025-12-04 at 2 41 09 PM" src="https://github.com/user-attachments/assets/f10fd4fb-83a5-470c-8723-e7abde75327b" />
+
 
 ## 5. **Document your Dataset and Results**
 Document the source of your dataset and any modifications you made to it. Describe the results of your analysis and 
