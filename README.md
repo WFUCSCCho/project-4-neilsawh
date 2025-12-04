@@ -93,8 +93,8 @@ Insertion, search, and deletion running time (reversed): <img width="641" height
 Document the source of your dataset and any modifications you made to it. Describe the results of your analysis and 
 how it compares to the theoretical performance of the hash table operations.
 
-Dataset Source: // FINISH ME
-Dataset Modifications ("None" if unchanged): // FINISH ME
+Dataset Source: [// FINISH ME](https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt) where i got my 10000 words from
+Dataset Modifications ("None" if unchanged): None
 Result Analysis: // FINISH ME
 
 ## Submission:
