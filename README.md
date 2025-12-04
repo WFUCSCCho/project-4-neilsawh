@@ -93,9 +93,11 @@ Insertion, search, and deletion running time (reversed): <img width="641" height
 Document the source of your dataset and any modifications you made to it. Describe the results of your analysis and 
 how it compares to the theoretical performance of the hash table operations.
 
-Dataset Source: [// FINISH ME](https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt) where i got my 10000 words from
+Dataset Source: https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt - where i got my 10000 words from
+
 Dataset Modifications ("None" if unchanged): None
-Result Analysis: // FINISH ME
+
+Result Analysis: The measured insert, search, and delete times roughly match the theoretical O(1) average case for hash table operations. As expected, all operations remained fast across all list orders, with slight variations due to list ordering and the effects of rehashing.
 
 ## Submission:
 
